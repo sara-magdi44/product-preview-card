@@ -1,0 +1,130 @@
+*{
+margin: 0;
+padding: 0;
+text-transform: capitalize;
+box-sizing: border-box;
+
+}
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --varCream: hsl(30, 38%, 92%);
+    --darkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--varCream);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+.container{
+    width: 650px;
+    height:500px;
+}
+.card{
+    height: 100%;
+    display: flex;
+    border-radius: 10px; 
+    background-color:var(--White) ;
+}
+
+.image img{
+    border-radius: 10px 0 0 10px;  
+    height: 100%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+#perfume , #title , #data , #price{
+    padding-bottom: 20px;
+
+}
+#perfume{
+    color: var(--Darkgrayishblue);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight:500;
+    letter-spacing: 0.4rem;
+}
+#title{
+    font-family: 'Fraunces', serif;
+    color:var(--darkblue);
+    font-weight: 700;
+}
+#data{
+    color: var(--Darkgrayishblue);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5rem;    
+    text-transform: none;
+}
+#price{
+    color:var(--Darkcyan);
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+}
+#price::after{
+    content: "$169.99";
+    font-size: 14px;
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+    position: relative;
+    left: 15px;
+    font-weight: 400;
+    bottom: 10px;
+}
+#addtocart{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    width: 100%;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 14px;
+    border: none;
+    font-weight: 700;
+    gap: 10px;
+}
+
+/* mobile size*/
+@media only screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        width: 400px;
+        height: 650px;
+    }
+    .card{
+        display:flex ;
+        flex-direction: column;
+        border-radius: 10px; 
+        background-color:var(--White) ;
+        margin: 20px;
+    }
+    .details{
+        display:flex ;
+        flex-direction: column;
+        background-color:var(--White) ;
+
+    }
+    .image img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
